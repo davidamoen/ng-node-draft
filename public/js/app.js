@@ -8,9 +8,13 @@ draftApp.config(['$routeProvider',
 	function($routeProvider) {
 		$routeProvider.
 			when('/', {
-				controller: 'mainController',
-				templateUrl: 'partials/main.html',
+				controller: 'loginController',
+				templateUrl: 'partials/login.html',
 			}).
+			when('/draft', {
+				controller: 'draftController',
+				templateUrl: 'partials/main.html',
+			}).			
 			otherwise({
 				redirectTo: '/'
 			});
